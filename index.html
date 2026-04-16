@@ -3,81 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah & Ayaan Enterprises | Best Electrical Contractors in Pakistan</title>
-    <meta name="description" content="Leading electrical contractors in Pakistan since 2013. HT/LV line stringing, substation design, transformer installation, and industrial electrification services.">
-    <meta name="keywords" content="electrical contractors Pakistan, HT line stringing, substation design, transformer installation">
+    <title>Abdullah & Ayaan Enterprises | Electrical Contractors Pakistan</title>
+    <meta name="description" content="13+ years of excellence in external & underground electrification, street lighting, earthing, solar solutions across Pakistan.">
     <meta name="google-site-verification" content="google27c327e2f394cf3f">
     
-    <!-- Preconnect for faster external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M30FSCKEYK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M30FSCKEYK');
+    </script>
     
-    <!-- Critical CSS inlined (no render blocking) -->
+    <!-- Tailwind CSS - Official CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS for fallback -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-        }
-        body {
-            background: #f8fafc;
-        }
-        /* High contrast colors for accessibility */
-        .hero-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-        }
-        .btn-primary {
-            background: #eab308;
-            color: #0f172a;
-            padding: 12px 28px;
-            border-radius: 12px;
-            font-weight: 700;
+        .card-hover:hover {
+            transform: translateY(-5px);
             transition: all 0.3s ease;
-            display: inline-block;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
         }
-        .btn-primary:hover {
-            background: #ca8a04;
-            transform: translateY(-2px);
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 12px;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            display: inline-block;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .btn-outline:hover {
-            background: white;
-            color: #1e3a8a;
-        }
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* High contrast floating buttons */
         .floating-btn {
             position: fixed;
             right: 20px;
             z-index: 1000;
         }
-        .whatsapp-btn {
-            background: #25D366;
-            bottom: 100px;
-        }
-        .call-btn {
-            background: #0077b5;
-            bottom: 160px;
-        }
+        .whatsapp-btn { background: #25D366; bottom: 100px; }
+        .call-btn { background: #0077b5; bottom: 160px; }
         .floating-btn a {
             display: flex;
             width: 52px;
@@ -88,268 +45,198 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            transition: transform 0.3s ease;
             text-decoration: none;
         }
-        .floating-btn a:hover {
-            transform: scale(1.1);
-        }
-        .service-card {
-            transition: all 0.3s ease;
-            background: white;
-            border-radius: 16px;
-            padding: 24px;
-            text-align: center;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border: 1px solid #e2e8f0;
-        }
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.15);
-        }
-        .location-link {
-            transition: all 0.2s ease;
-            display: block;
-            background: white;
-            padding: 12px;
-            border-radius: 12px;
-            text-align: center;
-            text-decoration: none;
-            color: #1e293b;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .location-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            color: #ca8a04;
-        }
-        .nav-link {
-            transition: color 0.2s ease;
-            text-decoration: none;
-            cursor: pointer;
-            color: #334155;
-        }
-        .nav-link:hover {
-            color: #ca8a04;
-        }
-        .active-nav {
-            color: #ca8a04 !important;
-            font-weight: 600;
-        }
-        /* Improved contrast for text */
-        .text-slate-600 { color: #475569; }
-        .text-slate-700 { color: #334155; }
-        .text-slate-800 { color: #1e293b; }
-        .bg-slate-50 { background: #f8fafc; }
-        .bg-slate-100 { background: #f1f5f9; }
-        @media (max-width: 768px) {
-            .container { padding: 0 16px; }
-            .floating-btn a { width: 45px; height: 45px; font-size: 22px; }
-        }
+        .floating-btn a:hover { transform: scale(1.1); transition: all 0.3s; }
+        .active-nav { color: #ca8a04 !important; }
+        .nav-link { cursor: pointer; }
     </style>
 </head>
-<body>
+<body class="bg-slate-50">
 
-    <!-- Floating WhatsApp & Call Buttons with ARIA labels -->
+    <!-- Floating WhatsApp & Call Buttons -->
     <div class="floating-btn whatsapp-btn">
-        <a href="https://wa.me/923457217210" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
-            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        </a>
+        <a href="https://wa.me/923457217210" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
     <div class="floating-btn call-btn">
-        <a href="tel:+923457217210" aria-label="Call us now">
-            <i class="fas fa-phone-alt" aria-hidden="true"></i>
-        </a>
+        <a href="tel:+923457217210"><i class="fas fa-phone-alt"></i></a>
     </div>
 
-    <!-- Navigation with ARIA labels -->
-    <nav class="bg-white shadow-md sticky top-0 z-50 border-b border-slate-200" aria-label="Main navigation">
-        <div class="container py-4 flex flex-wrap justify-between items-center">
-            <div id="logoTrigger" class="text-2xl font-extrabold text-blue-900 cursor-pointer select-none" role="button" tabindex="0" aria-label="Logo - Click 3 times for admin panel">
-                <i class="fas fa-bolt text-yellow-500 mr-2" aria-hidden="true"></i> Abdullah & Ayaan
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 border-b">
+        <div class="max-w-7xl mx-auto px-5 py-4 flex flex-wrap justify-between items-center">
+            <div id="logoTrigger" class="text-2xl font-extrabold text-blue-900 cursor-pointer">
+                <i class="fas fa-bolt text-yellow-500 mr-2"></i> Abdullah & Ayaan
             </div>
-            <div class="flex flex-wrap gap-4 md:gap-6 text-sm md:text-base font-semibold">
-                <a href="#" onclick="showPage('home'); return false;" id="navHome" class="nav-link" aria-label="Home page">Home</a>
-                <a href="#" onclick="showPage('about'); return false;" id="navAbout" class="nav-link" aria-label="About page">About</a>
-                <a href="#" onclick="showPage('services'); return false;" id="navServices" class="nav-link" aria-label="Services page">Services</a>
-                <a href="#" onclick="showPage('blog'); return false;" id="navBlog" class="nav-link" aria-label="Blog page">Blog</a>
-                <a href="#" onclick="showPage('contact'); return false;" id="navContact" class="nav-link" aria-label="Contact page">Contact</a>
+            <div class="flex flex-wrap gap-6 text-sm font-semibold">
+                <a href="#" onclick="showPage('home'); return false;" id="navHome" class="nav-link text-slate-700 hover:text-yellow-600">Home</a>
+                <a href="#" onclick="showPage('about'); return false;" id="navAbout" class="nav-link text-slate-700 hover:text-yellow-600">About</a>
+                <a href="#" onclick="showPage('services'); return false;" id="navServices" class="nav-link text-slate-700 hover:text-yellow-600">Services</a>
+                <a href="#" onclick="showPage('blog'); return false;" id="navBlog" class="nav-link text-slate-700 hover:text-yellow-600">Blog</a>
+                <a href="#" onclick="showPage('contact'); return false;" id="navContact" class="nav-link text-slate-700 hover:text-yellow-600">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main id="mainContent" aria-label="Main page content"></main>
+    <main id="mainContent"></main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-12" aria-label="Footer">
-        <div class="container grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
                 <div class="text-white text-xl font-bold mb-4">Abdullah & Ayaan Enterprises</div>
                 <p class="text-sm">Expert external electrification and construction services based in Pakistan. Powering progress for 13 years.</p>
-                <div class="flex justify-center md:justify-start gap-4 mt-4">
-                    <a href="#" class="text-2xl hover:text-yellow-500 transition" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" class="text-2xl hover:text-yellow-500 transition" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="#" class="text-2xl hover:text-yellow-500 transition" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#" class="text-2xl hover:text-yellow-500 transition" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                </div>
             </div>
             <div>
                 <div class="text-white font-bold mb-4">Contact</div>
                 <p class="text-sm mb-2">📞 <a href="tel:+923457217210" class="hover:text-white">+923457217210</a></p>
-                <p class="text-sm mb-2"✉️ <a href="mailto:abdulzahir7869@gmail.com" class="hover:text-white">abdulzahir7869@gmail.com</a></p>
+                <p class="text-sm mb-2">✉️ <a href="mailto:abdulzahir7869@gmail.com" class="hover:text-white">abdulzahir7869@gmail.com</a></p>
                 <p class="text-sm">📍 Pakistan</p>
             </div>
             <div>
                 <div class="text-white font-bold mb-4">Legal</div>
-                <a href="#" class="block text-sm hover:text-white mb-2 transition-colors" aria-label="Privacy Policy">Privacy Policy</a>
-                <a href="#" class="block text-sm hover:text-white transition-colors" aria-label="Terms of Service">Terms of Service</a>
+                <a href="#" class="block text-sm hover:text-white mb-2">Privacy Policy</a>
+                <a href="#" class="block text-sm hover:text-white">Terms of Service</a>
             </div>
         </div>
         <div class="text-center text-sm mt-8 pt-8 border-t border-slate-800">© 2026 Abdullah & Ayaan Enterprises. All rights reserved.</div>
     </footer>
 
-    <!-- Deferred loading for non-critical resources -->
     <script>
-        // Load Font Awesome after page load to avoid render blocking
-        window.addEventListener('load', function() {
-            var fontAwesome = document.createElement('link');
-            fontAwesome.rel = 'stylesheet';
-            fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
-            document.head.appendChild(fontAwesome);
-            
-            var googleFonts = document.createElement('link');
-            googleFonts.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-            googleFonts.rel = 'stylesheet';
-            document.head.appendChild(googleFonts);
-        });
-        
-        // Google Analytics (deferred)
-        setTimeout(function() {
-            var script = document.createElement('script');
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-M30FSCKEYK';
-            script.async = true;
-            document.head.appendChild(script);
-            window.dataLayer = window.dataLayer || [];
-            window.gtag = function(){dataLayer.push(arguments);};
-            gtag('js', new Date());
-            gtag('config', 'G-M30FSCKEYK');
-        }, 2000);
-    </script>
+        // Blog posts data
+        const blogPosts = [
+            { id: 1, title: "Future of Underground Electrification in Pakistan", excerpt: "How underground cabling reduces outages and improves safety.", date: "Mar 15, 2026", icon: "fa-bolt", content: "Underground electrification is becoming the gold standard. Abdullah & Ayaan Enterprises has executed over 45 km of underground cable projects." },
+            { id: 2, title: "Solar Street Lighting Solutions", excerpt: "Solar-powered LED lighting cuts electricity costs by up to 70%.", date: "Mar 2, 2026", icon: "fa-solar-panel", content: "With Pakistan's high solar irradiance, solar street lighting offers independence from grid fluctuations." },
+            { id: 3, title: "Earthing Systems for Safety", excerpt: "Proper earthing prevents electrical shocks and ensures compliance.", date: "Feb 18, 2026", icon: "fa-shield-haltered", content: "We specialize in chemical earthing, plate earthing, and rod earthing tailored to soil resistivity." },
+            { id: 4, title: "External Electrification for Housing Schemes", excerpt: "From load calculation to pole erection for large-scale projects.", date: "Jan 30, 2026", icon: "fa-house-chimney", content: "Managing external electrification involves coordination with DISCOs and future load growth." }
+        ];
 
-    <script>
-        // ==================== PAGE RENDERER ====================
         let currentPage = 'home';
         let clickCount = 0;
         let clickTimer = null;
-        
-        const blogPosts = [
-            { id: 1, title: "Future of Underground Electrification", excerpt: "How underground cabling reduces outages and improves safety.", date: "Mar 15, 2026", icon: "fa-bolt", content: "Underground electrification is becoming the gold standard. Abdullah & Ayaan Enterprises has executed over 45 km of underground cable projects." },
-            { id: 2, title: "Solar Street Lighting Solutions", excerpt: "Solar-powered LED lighting cuts electricity costs by up to 70%.", date: "Mar 2, 2026", icon: "fa-solar-panel", content: "With Pakistan's high solar irradiance, solar street lighting offers independence from grid fluctuations." },
-            { id: 3, title: "Earthing Systems for Safety", excerpt: "Proper earthing prevents electrical shocks and ensures compliance.", date: "Feb 18, 2026", icon: "fa-shield-haltered", content: "We specialize in chemical earthing, plate earthing, and rod earthing tailored to soil resistivity." },
-            { id: 4, title: "External Electrification Guide", excerpt: "From load calculation to pole erection for large-scale projects.", date: "Jan 30, 2026", icon: "fa-house-chimney", content: "Managing external electrification involves coordination with DISCOs and future load growth." }
-        ];
-        
+
+        // Show page function
         function showPage(page) {
             currentPage = page;
-            const el = document.getElementById('mainContent');
-            if (!el) return;
-            if (page === 'home') el.innerHTML = renderHome();
-            else if (page === 'about') el.innerHTML = renderAbout();
-            else if (page === 'services') el.innerHTML = renderServices();
-            else if (page === 'blog') el.innerHTML = renderBlog();
-            else if (page === 'contact') el.innerHTML = renderContact();
+            const contentDiv = document.getElementById('mainContent');
+            
+            if (page === 'home') contentDiv.innerHTML = renderHome();
+            else if (page === 'about') contentDiv.innerHTML = renderAbout();
+            else if (page === 'services') contentDiv.innerHTML = renderServices();
+            else if (page === 'blog') contentDiv.innerHTML = renderBlog();
+            else if (page === 'contact') contentDiv.innerHTML = renderContact();
             
             // Update active nav
-            ['Home','About','Services','Blog','Contact'].forEach(p => {
-                const nav = document.getElementById(`nav${p}`);
-                if (nav) {
-                    if (p.toLowerCase() === page) nav.classList.add('active-nav');
-                    else nav.classList.remove('active-nav');
-                }
-            });
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active-nav'));
+            const activeNav = document.getElementById('nav' + page.charAt(0).toUpperCase() + page.slice(1));
+            if (activeNav) activeNav.classList.add('active-nav');
+            
             window.scrollTo({ top: 0 });
         }
-        
+
+        // Home page render
         function renderHome() {
-            return `<section class="hero-bg text-white" aria-label="Hero section">
-                <div class="container py-20 md:py-28 text-center">
-                    <span class="bg-blue-800/50 px-4 py-1 rounded-full text-sm inline-block mb-4" aria-label="Trusted since 2013">🇵🇰 Pakistan's Premier Electrical Contractors Since 2013</span>
-                    <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 max-w-4xl mx-auto leading-tight">Powering the Future with Expert Electrification</h1>
-                    <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-10">13+ years of excellence — external & underground electrification, street lighting, earthing, solar & infrastructure.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button onclick="showPage('services')" class="btn-primary" aria-label="View our services">📋 Our Services</button>
-                        <button onclick="showPage('contact')" class="btn-outline" aria-label="Contact us for quote">📞 Get Free Quote</button>
+            return `
+            <section class="bg-gradient-to-br from-blue-900 to-slate-900 text-white">
+                <div class="max-w-7xl mx-auto px-5 py-24 text-center">
+                    <span class="bg-blue-800/50 px-4 py-1 rounded-full text-sm inline-block mb-4">🇵🇰 Pakistan's Premier Electrical Contractors</span>
+                    <h1 class="text-5xl md:text-6xl font-extrabold mt-4 mb-6">Powering Pakistan's Future with Excellence</h1>
+                    <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10">13+ years of experience in HT/LV line stringing, substation design, transformer installation, and industrial electrification.</p>
+                    <div class="flex gap-5 justify-center">
+                        <button onclick="showPage('services')" class="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold px-8 py-4 rounded-xl">Our Services</button>
+                        <button onclick="showPage('contact')" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 font-bold px-8 py-4 rounded-xl">Get Quote</button>
                     </div>
                 </div>
             </section>
-            <section class="py-16 bg-white" aria-label="Company statistics">
-                <div class="container">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                        <div><div class="text-3xl md:text-4xl font-bold text-blue-900">13+</div><div class="text-slate-600 text-sm mt-1">Years Experience</div></div>
-                        <div><div class="text-3xl md:text-4xl font-bold text-blue-900">250+</div><div class="text-slate-600 text-sm mt-1">Projects Completed</div></div>
-                        <div><div class="text-3xl md:text-4xl font-bold text-blue-900">50+</div><div class="text-slate-600 text-sm mt-1">Expert Team</div></div>
-                        <div><div class="text-3xl md:text-4xl font-bold text-blue-900">100%</div><div class="text-slate-600 text-sm mt-1">Client Satisfaction</div></div>
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-5">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-5">13 Years of Excellence</h2>
+                            <p class="text-slate-600 mb-6">Based in Pakistan, we've delivered high-quality electrical infrastructure projects.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>13+ years proven track record</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>ISO safety standards</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>250+ successful projects</li>
+                            </ul>
+                        </div>
+                        <div class="grid grid-cols-2 gap-5">
+                            <div class="bg-blue-50 p-6 rounded-2xl text-center"><div class="text-4xl font-black text-blue-600">13+</div><div>Years</div></div>
+                            <div class="bg-yellow-50 p-6 rounded-2xl text-center"><div class="text-4xl font-black text-yellow-600">250+</div><div>Projects</div></div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="py-16 bg-white" aria-label="Our core services">
-                <div class="container">
-                    <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold text-slate-800">Our Core Services</h2><div class="w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div><p class="text-slate-600 max-w-2xl mx-auto mt-4">Complete electrical infrastructure solutions across Pakistan</p></div>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="service-card"><i class="fas fa-bolt text-5xl text-blue-600 mb-4"></i><h3 class="text-xl font-bold mb-2 text-slate-800">HT/LT Line Stringing</h3><p class="text-slate-600">Professional high-tension and low-tension line installation across Pakistan.</p><button onclick="showPage('contact')" class="inline-block mt-4 text-yellow-600 font-semibold cursor-pointer">Contact Us →</button></div>
-                        <div class="service-card"><i class="fas fa-building text-5xl text-blue-600 mb-4"></i><h3 class="text-xl font-bold mb-2 text-slate-800">Substation Design</h3><p class="text-slate-600">Complete substation design, engineering, and installation services.</p><button onclick="showPage('contact')" class="inline-block mt-4 text-yellow-600 font-semibold cursor-pointer">Contact Us →</button></div>
-                        <div class="service-card"><i class="fas fa-charging-station text-5xl text-blue-600 mb-4"></i><h3 class="text-xl font-bold mb-2 text-slate-800">Transformer Installation</h3><p class="text-slate-600">Expert transformer installation, testing, and commissioning services.</p><button onclick="showPage('contact')" class="inline-block mt-4 text-yellow-600 font-semibold cursor-pointer">Contact Us →</button></div>
-                    </div>
-                </div>
-            </section>
-            <section class="py-16 bg-slate-50" aria-label="Service areas">
-                <div class="container">
-                    <div class="text-center mb-10"><h2 class="text-3xl font-bold text-slate-800">Service Areas</h2><div class="w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div><p class="text-slate-600 mt-4">Serving major cities across Pakistan</p></div>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                        <a href="#" class="location-link" onclick="showPage('contact'); return false;" aria-label="Service in Lahore">📍 Lahore</a>
-                        <a href="#" class="location-link" onclick="showPage('contact'); return false;" aria-label="Service in Karachi">📍 Karachi</a>
-                        <a href="#" class="location-link" onclick="showPage('contact'); return false;" aria-label="Service in Islamabad">📍 Islamabad</a>
-                        <a href="#" class="location-link" onclick="showPage('contact'); return false;" aria-label="Service in Faisalabad">📍 Faisalabad</a>
-                        <a href="#" class="location-link" onclick="showPage('contact'); return false;" aria-label="Service in Multan">📍 Multan</a>
-                        <a href="#" class="location-link" onclick="showPage('contact'); return false;" aria-label="Service in Gujranwala">📍 Gujranwala</a>
-                        <a href="#" class="location-link" onclick="showPage('contact'); return false;" aria-label="Service in Sialkot">📍 Sialkot</a>
+            <section class="py-16 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-5">
+                    <div class="text-center mb-12"><h2 class="text-3xl font-bold">Our Core Services</h2><div class="w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div></div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-2xl p-6 text-center card-hover shadow-md border"><i class="fas fa-bolt text-5xl text-blue-600 mb-4"></i><h3 class="text-xl font-bold mb-2">HT/LT Line Stringing</h3><p class="text-slate-600">Professional high-tension line installation across Pakistan.</p><button onclick="showPage('contact')" class="mt-4 text-yellow-600 font-semibold">Contact Us →</button></div>
+                        <div class="bg-white rounded-2xl p-6 text-center card-hover shadow-md border"><i class="fas fa-building text-5xl text-blue-600 mb-4"></i><h3 class="text-xl font-bold mb-2">Substation Design</h3><p class="text-slate-600">Complete substation design and engineering services.</p><button onclick="showPage('contact')" class="mt-4 text-yellow-600 font-semibold">Contact Us →</button></div>
+                        <div class="bg-white rounded-2xl p-6 text-center card-hover shadow-md border"><i class="fas fa-charging-station text-5xl text-blue-600 mb-4"></i><h3 class="text-xl font-bold mb-2">Transformer Installation</h3><p class="text-slate-600">Expert transformer installation and testing.</p><button onclick="showPage('contact')" class="mt-4 text-yellow-600 font-semibold">Contact Us →</button></div>
                     </div>
                 </div>
             </section>`;
         }
-        
+
+        // About page render
         function renderAbout() {
-            return `<section class="py-20 bg-white"><div class="container text-center"><h1 class="text-4xl font-bold mb-4 text-slate-800">About <span class="text-blue-700">Us</span></h1><div class="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div><p class="text-slate-600 max-w-3xl mx-auto text-lg">Founded in 2013, Abdullah & Ayaan Enterprises has grown into one of Pakistan's most trusted names in electrical infrastructure. Our commitment to safety, innovation, and timely delivery sets us apart.</p><div class="grid md:grid-cols-3 gap-8 mt-12"><div class="p-6 bg-slate-50 rounded-2xl"><i class="fas fa-eye text-4xl text-blue-700 mb-4"></i><h3 class="text-xl font-bold text-slate-800">Our Mission</h3><p class="text-slate-600">Deliver reliable, sustainable infrastructure.</p></div><div class="p-6 bg-slate-50 rounded-2xl"><i class="fas fa-handshake text-4xl text-blue-700 mb-4"></i><h3 class="text-xl font-bold text-slate-800">Our Values</h3><p class="text-slate-600">Safety first, integrity, client-centric.</p></div><div class="p-6 bg-slate-50 rounded-2xl"><i class="fas fa-globe text-4xl text-blue-700 mb-4"></i><h3 class="text-xl font-bold text-slate-800">Nationwide</h3><p class="text-slate-600">Serving all provinces of Pakistan.</p></div></div></div></section>`;
+            return `<section class="py-20 bg-white"><div class="max-w-7xl mx-auto px-5 text-center"><h1 class="text-4xl font-bold mb-4">About <span class="text-blue-700">Us</span></h1><div class="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div><p class="text-slate-600 max-w-3xl mx-auto text-lg">Founded in 2013, Abdullah & Ayaan Enterprises has grown into one of Pakistan's most trusted names in electrical infrastructure. Our commitment to safety, innovation, and timely delivery sets us apart.</p><div class="grid md:grid-cols-3 gap-8 mt-12"><div class="p-6 bg-slate-50 rounded-2xl"><i class="fas fa-eye text-4xl text-blue-700 mb-4"></i><h3 class="text-xl font-bold">Our Mission</h3><p class="text-slate-600">Deliver reliable, sustainable infrastructure.</p></div><div class="p-6 bg-slate-50 rounded-2xl"><i class="fas fa-handshake text-4xl text-blue-700 mb-4"></i><h3 class="text-xl font-bold">Our Values</h3><p class="text-slate-600">Safety first, integrity, client-centric.</p></div><div class="p-6 bg-slate-50 rounded-2xl"><i class="fas fa-globe text-4xl text-blue-700 mb-4"></i><h3 class="text-xl font-bold">Nationwide</h3><p class="text-slate-600">Serving all provinces of Pakistan.</p></div></div></div></section>`;
         }
-        
+
+        // Services page render
         function renderServices() {
-            const services = [{icon:"fa-bolt",title:"External Electrification"},{icon:"fa-hard-hat",title:"Underground"},{icon:"fa-lightbulb",title:"Street Lighting"},{icon:"fa-charging-station",title:"Earthing Systems"},{icon:"fa-sun",title:"Solar Lighting"},{icon:"fa-truck",title:"Pole Erection"}];
-            return `<section class="py-20 bg-white"><div class="container"><h1 class="text-4xl font-bold text-center mb-4 text-slate-800">Our <span class="text-blue-700">Services</span></h1><div class="w-24 h-1 bg-yellow-500 mx-auto mb-8 rounded-full"></div><div class="grid md:grid-cols-3 gap-8">${services.map(s => `<div class="bg-white rounded-2xl p-8 text-center card-hover shadow-md border"><i class="fas ${s.icon} text-5xl text-blue-600 mb-4"></i><h3 class="text-xl font-bold mb-2 text-slate-800">${s.title}</h3><p class="text-slate-600">Professional installation across Pakistan.</p><button onclick="showPage('contact')" class="mt-4 text-yellow-600 font-semibold cursor-pointer">Get Quote →</button></div>`).join('')}</div><div class="mt-12 text-center"><button onclick="showPage('contact')" class="bg-blue-900 text-white px-8 py-3 rounded-xl font-bold">Request a Quote</button></div></div></section>`;
+            const services = [{icon:"fa-bolt",title:"External Electrification"},{icon:"fa-hard-hat",title:"Underground Electrification"},{icon:"fa-lightbulb",title:"Street Lighting"},{icon:"fa-charging-station",title:"Earthing Systems"},{icon:"fa-sun",title:"Solar Lighting"},{icon:"fa-truck",title:"Pole Erection"}];
+            return `<section class="py-20 bg-white"><div class="max-w-7xl mx-auto px-5"><h1 class="text-4xl font-bold text-center mb-4">Our <span class="text-blue-700">Services</span></h1><div class="w-24 h-1 bg-yellow-500 mx-auto mb-8 rounded-full"></div><div class="grid md:grid-cols-3 gap-8">${services.map(s => `<div class="bg-white rounded-2xl p-8 text-center card-hover shadow-md border"><i class="fas ${s.icon} text-5xl text-blue-600 mb-4"></i><h3 class="text-xl font-bold mb-2">${s.title}</h3><p class="text-slate-600">Professional installation across Pakistan.</p><button onclick="showPage('contact')" class="mt-4 text-yellow-600 font-semibold">Get Quote →</button></div>`).join('')}</div><div class="mt-12 text-center"><button onclick="showPage('contact')" class="bg-blue-900 text-white px-8 py-3 rounded-xl font-bold">Request a Quote</button></div></div></section>`;
         }
-        
+
+        // Blog page render
         function renderBlog() {
-            return `<section class="py-20 bg-slate-50"><div class="container"><h1 class="text-4xl font-bold text-center mb-4 text-slate-800"><i class="fas fa-newspaper text-blue-700 mr-3"></i>Blog</h1><div class="w-24 h-1 bg-yellow-500 mx-auto mb-8 rounded-full"></div><div class="grid md:grid-cols-4 gap-6">${blogPosts.map(p => `<div class="bg-white rounded-2xl shadow-md p-6 card-hover border"><i class="fas ${p.icon} text-4xl text-blue-600 mb-3"></i><h3 class="text-xl font-bold mb-2 text-slate-800">${p.title}</h3><p class="text-slate-600 text-sm mb-2">${p.date}</p><p class="text-slate-600 mb-3">${p.excerpt.substring(0, 80)}...</p><button onclick="alert('${p.content.replace(/'/g, "\\'")}')" class="text-yellow-600 font-semibold cursor-pointer" aria-label="Read full article">Read More →</button></div>`).join('')}</div></div></section>`;
+            return `<section class="py-20 bg-slate-50"><div class="max-w-7xl mx-auto px-5"><h1 class="text-4xl font-bold text-center mb-4"><i class="fas fa-newspaper text-blue-700 mr-3"></i>Blog</h1><div class="w-24 h-1 bg-yellow-500 mx-auto mb-8 rounded-full"></div><div class="grid md:grid-cols-4 gap-6">${blogPosts.map(p => `<div class="bg-white rounded-2xl shadow-md p-6 card-hover border"><i class="fas ${p.icon} text-4xl text-blue-600 mb-3"></i><h3 class="text-xl font-bold mb-2">${p.title}</h3><p class="text-slate-600 text-sm mb-2">${p.date}</p><p class="text-slate-600 mb-3">${p.excerpt.substring(0, 80)}...</p><button onclick="alert('${p.content.replace(/'/g, "\\'")}')" class="text-yellow-600 font-semibold">Read More →</button></div>`).join('')}</div></div></section>`;
         }
-        
+
+        // Contact page render
         function renderContact() {
-            return `<section class="py-20 bg-white"><div class="max-w-4xl mx-auto px-5"><div class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-3xl p-8 text-white text-center"><i class="fas fa-headset text-5xl mb-4"></i><h2 class="text-3xl font-bold mb-4">Contact Us</h2><p class="text-blue-200 mb-8">Call or WhatsApp us for a free consultation</p><div class="space-y-4 mb-8"><div class="bg-blue-800 rounded-xl p-4"><i class="fas fa-phone-alt text-yellow-400 text-2xl mr-3"></i><a href="tel:+923457217210" class="text-2xl font-bold hover:text-yellow-400">+923457217210</a></div><div class="bg-blue-800 rounded-xl p-4"><i class="fab fa-whatsapp text-yellow-400 text-2xl mr-3"></i><a href="https://wa.me/923457217210" target="_blank" class="text-2xl font-bold hover:text-yellow-400">WhatsApp: +923457217210</a></div><div class="bg-blue-800 rounded-xl p-4"><i class="fas fa-envelope text-yellow-400 text-2xl mr-3"></i><a href="mailto:abdulzahir7869@gmail.com" class="text-xl font-bold hover:text-yellow-400">abdulzahir7869@gmail.com</a></div></div><p class="text-blue-200">Office Hours: Monday - Saturday, 9:00 AM - 6:00 PM</p></div></div></section>`;
+            return `<section class="py-20 bg-white">
+                <div class="max-w-4xl mx-auto px-5">
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-3xl p-8 text-white text-center">
+                        <i class="fas fa-headset text-5xl mb-4"></i>
+                        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+                        <p class="text-blue-200 mb-8">Call or WhatsApp us for a free consultation</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="bg-blue-800 rounded-xl p-4">
+                                <i class="fas fa-phone-alt text-yellow-400 text-2xl mr-3"></i>
+                                <a href="tel:+923457217210" class="text-2xl font-bold hover:text-yellow-400">+923457217210</a>
+                            </div>
+                            <div class="bg-blue-800 rounded-xl p-4">
+                                <i class="fab fa-whatsapp text-yellow-400 text-2xl mr-3"></i>
+                                <a href="https://wa.me/923457217210" target="_blank" class="text-2xl font-bold hover:text-yellow-400">WhatsApp: +923457217210</a>
+                            </div>
+                            <div class="bg-blue-800 rounded-xl p-4">
+                                <i class="fas fa-envelope text-yellow-400 text-2xl mr-3"></i>
+                                <a href="mailto:abdulzahir7869@gmail.com" class="text-xl font-bold hover:text-yellow-400">abdulzahir7869@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <p class="text-blue-200">Office Hours: Monday - Saturday, 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </section>`;
         }
-        
+
         // Admin panel on 3 clicks
-        const logo = document.getElementById('logoTrigger');
-        if (logo) {
-            logo.addEventListener('click', () => {
-                clickCount++;
-                clearTimeout(clickTimer);
-                clickTimer = setTimeout(() => { clickCount = 0; }, 800);
-                if (clickCount === 3) {
-                    clickCount = 0;
-                    alert('🔐 ADMIN PANEL\n\nWelcome to Admin Panel\n\nFeatures:\n- Lead Management\n- SEO Settings\n- Backup & Restore\n\nContact us for full access.');
-                }
-            });
-        }
-        
+        document.getElementById('logoTrigger').addEventListener('click', () => {
+            clickCount++;
+            clearTimeout(clickTimer);
+            clickTimer = setTimeout(() => { clickCount = 0; }, 800);
+            if (clickCount === 3) {
+                clickCount = 0;
+                alert('🔐 ADMIN PANEL\n\nWelcome to Admin Panel\n\nFeatures:\n- Lead Management\n- SEO Settings\n- Backup & Restore\n\nContact us for full access.');
+            }
+        });
+
         // Start with home page
         showPage('home');
     </script>
