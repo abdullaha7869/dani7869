@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Abdulzahir Enterprises</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0d2b1f;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 30px;
+        }
+        .logo-icon {
+            font-size: 60px;
+            background: #ffd700;
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+        h1 {
+            color: #0d2b1f;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .btn {
+            display: inline-block;
+            background: #0d2b1f;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #1a4a33;
+            transform: translateY(-2px);
+        }
+        .info {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        .info h3 {
+            color: #0d2b1f;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .info code {
+            background: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .steps {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+        .steps li {
+            margin: 8px 0;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <div class="logo-icon">💧⛽</div>
+            <h1>Abdulzahir Enterprises</h1>
+            <p>Content Management System</p>
+        </div>
+        
+        <button class="btn" id="loginBtn">Login with Netlify Identity</button>
+        
+        <div class="info">
+            <h3>📌 How to Access Admin Panel:</h3>
+            <ol class="steps">
+                <li>1. Click the login button above</li>
+                <li>2. You'll be redirected to Netlify Identity</li>
+                <li>3. Login with your email and password</li>
+                <li>4. You can now manage your website content!</li>
+            </ol>
+            <hr style="margin: 15px 0;">
+            <p style="font-size: 12px; margin-top: 10px;">
+                📧 Need help? Contact: abdulzahir7869@gmail.com
+            </p>
+            <p style="font-size: 12px; margin-top: 5px;">
+                🔐 <strong>Secret Access:</strong> Click logo 3 times on homepage
+            </p>
+        </div>
+    </div>
+    
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        const netlifyIdentity = window.netlifyIdentity;
+        
+        netlifyIdentity.on('init', user => {
+            if (user) {
+                window.location.href = '/admin/#/collections';
+            }
+        });
+        
+        document.getElementById('loginBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            netlifyIdentity.open();
+        });
+        
+        netlifyIdentity.on('login', user => {
+            window.location.href = '/admin/#/collections';
+        });
+    </script>
+</body>
+</html>
