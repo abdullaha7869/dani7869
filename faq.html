@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Abdulzahir Enterprises</title>
+    <title>FAQ - Abdulzahir Enterprises | Frequently Asked Questions About Tanks & Trolleys</title>
+    <meta name="description" content="Find answers to common questions about our water tanks, petrol tanks, diesel tanks, and trolleys. Warranty, delivery, materials, pricing, and more.">
+    <meta name="keywords" content="FAQ, frequently asked questions, tank warranty, delivery charges, custom sizes, material options, payment methods">
+    <link rel="canonical" href="https://abdulzahirenterprises.com/faq.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -15,7 +20,7 @@
         .header-top .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
         .main-header { padding: 15px 0; }
         .main-header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo { display: flex; align-items: center; gap: 12px; cursor: pointer; }
         .logo-icon { background: #ffd700; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; }
         .logo-text h1 { font-size: 22px; font-weight: 700; margin: 0; }
         .logo-text p { font-size: 10px; color: #ffd700; letter-spacing: 1.5px; margin-top: 3px; }
@@ -31,7 +36,8 @@
         .page-header h1 { font-size: 48px; font-weight: 700; margin-bottom: 15px; }
         .faq-section { padding: 80px 0; background: #f8fafc; }
         .faq-grid { max-width: 900px; margin: auto; }
-        .faq-item { background: white; border-radius: 16px; padding: 25px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .faq-item { background: white; border-radius: 16px; padding: 25px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+        .faq-item:hover { transform: translateX(5px); border-left: 3px solid #ffd700; }
         .faq-item h3 { color: #0d2b1f; font-size: 20px; margin-bottom: 10px; }
         .faq-item p { color: #555; line-height: 1.6; }
         footer { background: #071a12; color: white; padding: 50px 0 30px; }
@@ -41,7 +47,7 @@
         .footer-col li { margin-bottom: 12px; }
         .footer-col a { color: #ccc; text-decoration: none; font-size: 14px; }
         .footer-col a:hover { color: #ffd700; }
-        .social-icons a { color: white; font-size: 22px; margin-right: 15px; display: inline-block; }
+        .social-icons a { color: white; font-size: 22px; margin-right: 15px; display: inline-block; text-decoration: none; }
         .social-icons a:hover { color: #ffd700; transform: translateY(-3px); }
         .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: #888; }
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px; text-decoration: none; z-index: 99; }
@@ -69,18 +75,18 @@
 <header>
     <div class="main-header">
         <div class="container">
-            <div class="logo">
+            <div class="logo" id="secretAdminLogo">
                 <div class="logo-icon">💧⛽</div>
                 <div class="logo-text"><h1>Abdulzahir Enterprises</h1><p>ALLIED CHATTHA PETROLEUM</p></div>
             </div>
             <div class="header-right">
                 <div class="language-switch">
-                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('ur')">اردو</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('ur')" aria-label="Urdu">اردو</button>
                 </div>
-                <button class="mobile-menu-btn">☰</button>
+                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
             </div>
-            <nav>
+            <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html" data-en="Home" data-ur="ہوم">Home</a></li>
                     <li><a href="about.html" data-en="About" data-ur="تعارف">About</a></li>
@@ -98,32 +104,34 @@
     </div>
 </header>
 
-<section class="page-header">
-    <div class="container">
-        <h1 data-en="Frequently Asked Questions" data-ur="اکثر پوچھے گئے سوالات">Frequently Asked Questions</h1>
-        <p data-en="Find answers to common questions about our products and services" data-ur="ہماری مصنوعات اور خدمات کے بارے میں عام سوالات کے جوابات تلاش کریں">Find answers to common questions about our products and services</p>
-    </div>
-</section>
-
-<section class="faq-section">
-    <div class="container">
-        <div class="faq-grid">
-            <div class="faq-item"><h3 data-en="1. What is the warranty on your products?" data-ur="1. آپ کی مصنوعات پر کیا وارنٹی ہے؟">1. What is the warranty on your products?</h3><p data-en="1-year warranty on tanks only (water tanks, petrol tanks, diesel tanks). Trolleys do not come with a warranty." data-ur="صرف ٹینکوں پر 1 سال کی وارنٹی (پانی کے ٹینک، پیٹرول ٹینک، ڈیزل ٹینک)۔ ٹرالیوں پر وارنٹی نہیں ہے۔">1-year warranty on tanks only (water tanks, petrol tanks, diesel tanks). Trolleys do not come with a warranty.</p></div>
-            <div class="faq-item"><h3 data-en="2. Do you deliver nationwide?" data-ur="2. کیا آپ ملک بھر میں ڈیلیوری کرتے ہیں؟">2. Do you deliver nationwide?</h3><p data-en="Yes, we deliver to all cities in Pakistan. Delivery charges apply based on location." data-ur="جی ہاں، ہم پاکستان کے تمام شہروں میں ڈیلیوری کرتے ہیں۔ مقام کی بنیاد پر ڈلیوری چارجز لاگو ہوتے ہیں۔">Yes, we deliver to all cities in Pakistan. Delivery charges apply based on location.</p></div>
-            <div class="faq-item"><h3 data-en="3. Can I visit your factory?" data-ur="3. کیا میں آپ کی فیکٹری دیکھ سکتا ہوں؟">3. Can I visit your factory?</h3><p data-en="Absolutely! Our factory is at 202 RB Gatti, Faisalabad. Visit Mon-Sat, 9AM-5PM." data-ur="بالکل! ہماری فیکٹری 202 RB گٹی، فیصل آباد میں ہے۔ پیر تا ہفتہ، صبح 9 سے شام 5 بجے ملاحظہ کریں۔">Absolutely! Our factory is at 202 RB Gatti, Faisalabad. Visit Mon-Sat, 9AM-5PM.</p></div>
-            <div class="faq-item"><h3 data-en="4. Do you offer custom sizes?" data-ur="4. کیا آپ اپنی مرضی کے سائز پیش کرتے ہیں؟">4. Do you offer custom sizes?</h3><p data-en="Yes, we manufacture custom-sized tanks and trolleys as per requirements. Contact us to discuss." data-ur="جی ہاں، ہم ضرورت کے مطابق اپنی مرضی کے سائز کے ٹینک اور ٹرالیاں تیار کرتے ہیں۔ بات کرنے کے لیے ہم سے رابطہ کریں۔">Yes, we manufacture custom-sized tanks and trolleys as per requirements. Contact us to discuss.</p></div>
-            <div class="faq-item"><h3 data-en="5. What materials do you use?" data-ur="5. آپ کون سے مواد استعمال کرتے ہیں؟">5. What materials do you use?</h3><p data-en="Material is used as per client demand. We work with various materials based on customer requirements." data-ur="گاہک کی درخواست کے مطابق مواد استعمال کیا جاتا ہے۔ ہم گاہک کی ضروریات کی بنیاد پر مختلف مواد کے ساتھ کام کرتے ہیں۔">Material is used as per client demand. We work with various materials based on customer requirements.</p></div>
-            <div class="faq-item"><h3 data-en="6. How can I get a price quote?" data-ur="6. میں قیمت کا تخمینہ کیسے حاصل کروں؟">6. How can I get a price quote?</h3><p data-en="Call 03427660710, email abdulzahir7869@gmail.com, or use our contact form." data-ur="03427660710 پر کال کریں، abdulzahir7869@gmail.com پر ای میل کریں، یا ہمارا رابطہ فارم استعمال کریں۔">Call 03427660710, email abdulzahir7869@gmail.com, or use our contact form.</p></div>
-            <div class="faq-item"><h3 data-en="7. Do you provide installation service?" data-ur="7. کیا آپ انسٹالیشن سروس فراہم کرتے ہیں؟">7. Do you provide installation service?</h3><p data-en="Yes, professional installation available for all products within 50km of Faisalabad (charges apply)." data-ur="جی ہاں، فیصل آباد کے 50 کلومیٹر کے اندر تمام مصنوعات کے لیے پیشہ ورانہ تنصیب دستیاب ہے (چارجز لاگو ہوتے ہیں)۔">Yes, professional installation available for all products within 50km of Faisalabad (charges apply).</p></div>
-            <div class="faq-item"><h3 data-en="8. What payment methods do you accept?" data-ur="8. آپ ادائیگی کے کون سے طریقے قبول کرتے ہیں؟">8. What payment methods do you accept?</h3><p data-en="Cash and bank transfer accepted." data-ur="نقد اور بینک ٹرانسفر قبول کیا جاتا ہے۔">Cash and bank transfer accepted.</p></div>
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1 data-en="Frequently Asked Questions" data-ur="اکثر پوچھے گئے سوالات">Frequently Asked Questions</h1>
+            <p data-en="Find answers to common questions about our products and services" data-ur="ہماری مصنوعات اور خدمات کے بارے میں عام سوالات کے جوابات تلاش کریں">Find answers to common questions about our products and services</p>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-grid">
+                <div class="faq-item"><h3 data-en="1. What is the warranty on your products?" data-ur="1. آپ کی مصنوعات پر کیا وارنٹی ہے؟">1. What is the warranty on your products?</h3><p data-en="1-year warranty on tanks only (water tanks, petrol tanks, diesel tanks). Trolleys do not come with a warranty." data-ur="صرف ٹینکوں پر 1 سال کی وارنٹی (پانی کے ٹینک، پیٹرول ٹینک، ڈیزل ٹینک)۔ ٹرالیوں پر وارنٹی نہیں ہے۔">1-year warranty on tanks only (water tanks, petrol tanks, diesel tanks). Trolleys do not come with a warranty.</p></div>
+                <div class="faq-item"><h3 data-en="2. Do you deliver nationwide?" data-ur="2. کیا آپ ملک بھر میں ڈیلیوری کرتے ہیں؟">2. Do you deliver nationwide?</h3><p data-en="Yes, we deliver to all cities in Pakistan. Delivery charges apply based on location." data-ur="جی ہاں، ہم پاکستان کے تمام شہروں میں ڈیلیوری کرتے ہیں۔ مقام کی بنیاد پر ڈلیوری چارجز لاگو ہوتے ہیں۔">Yes, we deliver to all cities in Pakistan. Delivery charges apply based on location.</p></div>
+                <div class="faq-item"><h3 data-en="3. Can I visit your factory?" data-ur="3. کیا میں آپ کی فیکٹری دیکھ سکتا ہوں؟">3. Can I visit your factory?</h3><p data-en="Absolutely! Our factory is at 202 RB Gatti, Faisalabad. Visit Mon-Sat, 9AM-5PM." data-ur="بالکل! ہماری فیکٹری 202 RB گٹی، فیصل آباد میں ہے۔ پیر تا ہفتہ، صبح 9 سے شام 5 بجے ملاحظہ کریں۔">Absolutely! Our factory is at 202 RB Gatti, Faisalabad. Visit Mon-Sat, 9AM-5PM.</p></div>
+                <div class="faq-item"><h3 data-en="4. Do you offer custom sizes?" data-ur="4. کیا آپ اپنی مرضی کے سائز پیش کرتے ہیں؟">4. Do you offer custom sizes?</h3><p data-en="Yes, we manufacture custom-sized tanks and trolleys as per requirements. Contact us to discuss." data-ur="جی ہاں، ہم ضرورت کے مطابق اپنی مرضی کے سائز کے ٹینک اور ٹرالیاں تیار کرتے ہیں۔ بات کرنے کے لیے ہم سے رابطہ کریں۔">Yes, we manufacture custom-sized tanks and trolleys as per requirements. Contact us to discuss.</p></div>
+                <div class="faq-item"><h3 data-en="5. What materials do you use?" data-ur="5. آپ کون سے مواد استعمال کرتے ہیں؟">5. What materials do you use?</h3><p data-en="Material is used as per client demand. We work with various materials based on customer requirements." data-ur="گاہک کی درخواست کے مطابق مواد استعمال کیا جاتا ہے۔ ہم گاہک کی ضروریات کی بنیاد پر مختلف مواد کے ساتھ کام کرتے ہیں۔">Material is used as per client demand. We work with various materials based on customer requirements.</p></div>
+                <div class="faq-item"><h3 data-en="6. How can I get a price quote?" data-ur="6. میں قیمت کا تخمینہ کیسے حاصل کروں؟">6. How can I get a price quote?</h3><p data-en="Call 03427660710, email abdulzahir7869@gmail.com, or use our contact form." data-ur="03427660710 پر کال کریں، abdulzahir7869@gmail.com پر ای میل کریں، یا ہمارا رابطہ فارم استعمال کریں۔">Call 03427660710, email abdulzahir7869@gmail.com, or use our contact form.</p></div>
+                <div class="faq-item"><h3 data-en="7. Do you provide installation service?" data-ur="7. کیا آپ انسٹالیشن سروس فراہم کرتے ہیں؟">7. Do you provide installation service?</h3><p data-en="Yes, professional installation available for all products within 50km of Faisalabad (charges apply)." data-ur="جی ہاں، فیصل آباد کے 50 کلومیٹر کے اندر تمام مصنوعات کے لیے پیشہ ورانہ تنصیب دستیاب ہے (چارجز لاگو ہوتے ہیں)۔">Yes, professional installation available for all products within 50km of Faisalabad (charges apply).</p></div>
+                <div class="faq-item"><h3 data-en="8. What payment methods do you accept?" data-ur="8. آپ ادائیگی کے کون سے طریقے قبول کرتے ہیں؟">8. What payment methods do you accept?</h3><p data-en="Cash and bank transfer accepted." data-ur="نقد اور بینک ٹرانسفر قبول کیا جاتا ہے۔">Cash and bank transfer accepted.</p></div>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-col"><h4>Abdulzahir Enterprises</h4><p data-en="Premium manufacturer since 2007" data-ur="2007 سے پریمیم مینوفیکچرر">Premium manufacturer since 2007</p><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
+            <div class="footer-col"><h4>Abdulzahir Enterprises</h4><p data-en="Premium manufacturer since 2007" data-ur="2007 سے پریمیم مینوفیکچرر">Premium manufacturer since 2007</p><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></div></div>
             <div class="footer-col"><h4 data-en="Quick Links" data-ur="فوری لنکس">Quick Links</h4><ul><li><a href="index.html" data-en="Home" data-ur="ہوم">Home</a></li><li><a href="about.html" data-en="About" data-ur="تعارف">About</a></li><li><a href="contact.html" data-en="Contact" data-ur="رابطہ">Contact</a></li><li><a href="faq.html" data-en="FAQ" data-ur="سوالات">FAQ</a></li></ul></div>
             <div class="footer-col"><h4 data-en="Products" data-ur="پراڈکٹس">Products</h4><ul><li><a href="water-tanks.html" data-en="Water Tanks" data-ur="پانی کے ٹینک">Water Tanks</a></li><li><a href="petrol-tanks.html" data-en="Petrol Tanks" data-ur="پیٹرول ٹینک">Petrol Tanks</a></li><li><a href="diesel-tanks.html" data-en="Diesel Tanks" data-ur="ڈیزل ٹینک">Diesel Tanks</a></li><li><a href="trolleys.html" data-en="Trolleys" data-ur="ٹرالیاں">Trolleys</a></li></ul></div>
             <div class="footer-col"><h4 data-en="Contact Info" data-ur="رابطہ کی معلومات">Contact Info</h4><p>📍 202 RB Gatti, Faisalabad</p><p>📞 03427660710</p><p>✉️ abdulzahir7869@gmail.com</p><p data-en="🕒 Mon-Sat: 9AM - 7PM" data-ur="🕒 پیر تا ہفتہ: 9AM - 7PM">🕒 Mon-Sat: 9AM - 7PM</p></div>
@@ -132,7 +140,7 @@
     </div>
 </footer>
 
-<a href="https://wa.me/923427660710?text=Hello%20Abdulzahir%20Enterprises%2C%20I%20need%20a%20quote" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/923427660710?text=Hello%20Abdulzahir%20Enterprises%2C%20I%20need%20a%20quote" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
 
 <script>
     document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() { document.querySelector('nav ul').classList.toggle('show'); });
@@ -146,6 +154,14 @@
         const headerTop = document.querySelector('.header-top .container div:first-child');
         if(headerTop) headerTop.textContent = lang === 'en' ? '🏭 Established Since 2007' : '🏭 قائم شد 2007 سے';
     }
+    
+    let clickCount = 0, clickTimer;
+    document.getElementById('secretAdminLogo')?.addEventListener('click', function() {
+        clickCount++;
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(() => clickCount = 0, 1000);
+        if (clickCount === 3) { window.open('/admin/', '_blank'); clickCount = 0; }
+    });
 </script>
 </body>
 </html>

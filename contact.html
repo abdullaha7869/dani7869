@@ -3,72 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Abdulzahir Enterprises</title>
+    <title>Contact Us - Abdulzahir Enterprises | Get a Quote for Tanks & Trolleys in Faisalabad</title>
+    <meta name="description" content="Contact Abdulzahir Enterprises for premium water tanks, petrol tanks, diesel tanks, and trolleys. Get a free quote. Call 03427660710 or email abdulzahir7869@gmail.com.">
+    <meta name="keywords" content="contact us, get quote, water tanks price, petrol tanks, diesel tanks, trolleys, Faisalabad">
+    <link rel="canonical" href="https://abdulzahirenterprises.com/contact.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        .container { width: 90%; max-width: 1200px; margin: auto; padding: 20px 0; }
-        header { background: #1a3e2c; color: white; padding: 20px 0; }
-        .logo h1 { font-size: 24px; }
-        .logo p { color: #ffd700; font-size: 14px; }
-        nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px; }
-        nav a { color: white; text-decoration: none; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1a1a1a; background: #fff; }
+        .container { width: 90%; max-width: 1280px; margin: auto; padding: 0 20px; }
+        header { background: #0d2b1f; color: white; padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .header-top { background: #ffd700; padding: 8px 0; color: #0d2b1f; font-size: 13px; }
+        .header-top .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+        .main-header { padding: 15px 0; }
+        .main-header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+        .logo-icon { background: #ffd700; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+        .logo-text h1 { font-size: 22px; font-weight: 700; margin: 0; }
+        .logo-text p { font-size: 10px; color: #ffd700; letter-spacing: 1.5px; margin-top: 3px; }
+        .language-switch { display: flex; gap: 8px; background: rgba(255,255,255,0.15); padding: 5px 10px; border-radius: 40px; margin-left: 20px; }
+        .lang-btn { background: none; border: none; color: white; padding: 5px 12px; border-radius: 30px; cursor: pointer; font-size: 13px; }
+        .lang-btn.active { background: #ffd700; color: #0d2b1f; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        nav ul { list-style: none; display: flex; gap: 28px; }
+        nav a { color: white; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
         nav a:hover { color: #ffd700; }
-        .contact-page { padding: 50px 0; }
-        .contact-page h2 { text-align: center; margin-bottom: 30px; color: #1a3e2c; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .contact-info p { margin: 15px 0; }
-        form input, form select, form textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
-        .btn { background: #1a3e2c; color: white; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; }
-        footer { background: #0a1f12; color: white; text-align: center; padding: 30px 0; margin-top: 50px; }
-        .social-links a { color: white; font-size: 18px; margin: 0 10px; text-decoration: none; }
-        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } nav ul { flex-direction: column; gap: 10px; } }
+        .mobile-menu-btn { display: none; font-size: 24px; cursor: pointer; background: none; border: none; color: white; }
+        .page-header { background: linear-gradient(135deg, #0d2b1f 0%, #1a4a33 100%); color: white; padding: 60px 0; text-align: center; }
+        .page-header h1 { font-size: 48px; font-weight: 700; margin-bottom: 15px; }
+        .contact-section { padding: 80px 0; background: #f8fafc; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-info { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .contact-info h3 { font-size: 24px; color: #0d2b1f; margin-bottom: 25px; }
+        .contact-info p { margin: 15px 0; color: #555; }
+        .contact-info i { width: 30px; color: #ffd700; margin-right: 10px; }
+        .contact-form { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .contact-form h3 { font-size: 24px; color: #0d2b1f; margin-bottom: 25px; }
+        form input, form select, form textarea { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #e0e0e0; border-radius: 10px; font-family: inherit; }
+        .btn-primary { background: #ffd700; color: #0d2b1f; padding: 14px 35px; border-radius: 40px; text-decoration: none; font-weight: 600; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-primary:hover { background: #ffc107; transform: translateY(-2px); }
+        .map { margin-top: 30px; border-radius: 15px; overflow: hidden; }
+        footer { background: #071a12; color: white; padding: 50px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { font-size: 18px; margin-bottom: 20px; color: #ffd700; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 12px; }
+        .footer-col a { color: #ccc; text-decoration: none; font-size: 14px; }
+        .footer-col a:hover { color: #ffd700; }
+        .social-icons a { color: white; font-size: 22px; margin-right: 15px; display: inline-block; text-decoration: none; }
+        .social-icons a:hover { color: #ffd700; transform: translateY(-3px); }
+        .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: #888; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px; text-decoration: none; z-index: 99; }
+        .whatsapp-float:hover { transform: scale(1.1); background: #128C7E; }
+        .success-message { background: #d4edda; color: #155724; padding: 15px; border-radius: 10px; margin-bottom: 20px; display: none; }
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #0d2b1f; flex-direction: column; padding: 20px; text-align: center; gap: 15px; }
+            nav ul.show { display: flex; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .page-header h1 { font-size: 32px; }
+            .header-right { width: 100%; justify-content: space-between; margin-top: 15px; }
+            .language-switch { margin-left: 0; }
+        }
     </style>
 </head>
 <body>
-<header>
+
+<div class="header-top">
     <div class="container">
-        <div class="logo"><h1>Abdulzahir Enterprises</h1><p>Allied Chattha Petroleum</p></div>
-        <nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="water-tanks.html">Water Tanks</a></li><li><a href="petrol-tanks.html">Petrol Tanks</a></li><li><a href="diesel-tanks.html">Diesel Tanks</a></li><li><a href="trolleys.html">Trolleys</a></li><li><a href="blog.html">Blog</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+        <div data-en="🏭 Established Since 2007" data-ur="🏭 قائم شد 2007 سے">🏭 Established Since 2007</div>
+        <div><span>📞 03427660710</span> <span>✉️ abdulzahir7869@gmail.com</span></div>
     </div>
-</header>
-<section class="contact-page">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>📍 <strong>Address:</strong> 202 RB Gatti, Faisalabad, Punjab, Pakistan</p>
-                <p>📞 <strong>Phone:</strong> 03427660710</p>
-                <p>✉️ <strong>Email:</strong> abdulzahir7869@gmail.com</p>
-                <p>🕒 <strong>Business Hours:</strong> Mon-Sat: 9AM - 7PM | Sunday: Closed</p>
-                <h3>Follow Us</h3>
-                <div class="social-links"><a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">WhatsApp</a> | <a href="#">Twitter</a></div>
+</div>
+
+<header>
+    <div class="main-header">
+        <div class="container">
+            <div class="logo" id="secretAdminLogo">
+                <div class="logo-icon">💧⛽</div>
+                <div class="logo-text"><h1>Abdulzahir Enterprises</h1><p>ALLIED CHATTHA PETROLEUM</p></div>
             </div>
-            <div>
-                <form name="contact" method="POST" data-netlify="true">
-                    <input type="hidden" name="form-name" value="contact">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="tel" name="phone" placeholder="Phone Number">
-                    <select name="product">
-                        <option>Water Tank</option>
-                        <option>Petrol Tank</option>
-                        <option>Diesel Tank</option>
-                        <option>Trolley</option>
-                    </select>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+            <div class="header-right">
+                <div class="language-switch">
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('ur')" aria-label="Urdu">اردو</button>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
             </div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-ur="ہوم">Home</a></li>
+                    <li><a href="about.html" data-en="About" data-ur="تعارف">About</a></li>
+                    <li><a href="water-tanks.html" data-en="Water Tanks" data-ur="پانی کے ٹینک">Water Tanks</a></li>
+                    <li><a href="petrol-tanks.html" data-en="Petrol Tanks" data-ur="پیٹرول ٹینک">Petrol Tanks</a></li>
+                    <li><a href="diesel-tanks.html" data-en="Diesel Tanks" data-ur="ڈیزل ٹینک">Diesel Tanks</a></li>
+                    <li><a href="trolleys.html" data-en="Trolleys" data-ur="ٹرالیاں">Trolleys</a></li>
+                    <li><a href="blog.html" data-en="Blog" data-ur="بلاگ">Blog</a></li>
+                    <li><a href="gallery.html" data-en="Gallery" data-ur="گیلری">Gallery</a></li>
+                    <li><a href="faq.html" data-en="FAQ" data-ur="سوالات">FAQ</a></li>
+                    <li><a href="contact.html" data-en="Contact" data-ur="رابطہ">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
-</section>
+</header>
+
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1 data-en="Contact Us" data-ur="رابطہ کریں">Contact Us</h1>
+            <p data-en="Get in touch with us for quotes, inquiries, or support" data-ur="قیمتوں، پوچھ گچھ یا مدد کے لیے ہم سے رابطہ کریں">Get in touch with us for quotes, inquiries, or support</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 data-en="Get in Touch" data-ur="رابطہ کریں">Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <strong data-en="Address:" data-ur="پتہ:">Address:</strong> 202 RB Gatti, Faisalabad, Punjab, Pakistan</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <strong data-en="Phone:" data-ur="فون:">Phone:</strong> 03427660710</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <strong data-en="Email:" data-ur="ای میل:">Email:</strong> abdulzahir7869@gmail.com</p>
+                    <p><i class="fas fa-clock" aria-hidden="true"></i> <strong data-en="Hours:" data-ur="اوقات:">Hours:</strong> <span data-en="Mon-Sat: 9AM - 7PM" data-ur="پیر تا ہفتہ: 9AM - 7PM">Mon-Sat: 9AM - 7PM</span> | <span data-en="Sunday: Closed" data-ur="اتوار: بند">Sunday: Closed</span></p>
+                    <div class="map">
+                        <iframe src="https://maps.google.com/maps?q=Faisalabad+Punjab+Pakistan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="250" style="border:0; border-radius: 15px;" allowfullscreen loading="lazy" title="Google Map of Faisalabad"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 data-en="Send us a Message" data-ur="ہمیں پیغام بھیجیں">Send us a Message</h3>
+                    <div id="successMessage" class="success-message">Thank you! We will contact you soon.</div>
+                    <form name="contact" method="POST" data-netlify="true" onsubmit="submitContactForm(event)">
+                        <input type="hidden" name="form-name" value="contact">
+                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+                        <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number">
+                        <select name="product" aria-label="Select Product">
+                            <option data-en="Select Product" data-ur="پروڈکٹ منتخب کریں">Select Product</option>
+                            <option data-en="Water Tank" data-ur="پانی کا ٹینک">Water Tank</option>
+                            <option data-en="Petrol Tank" data-ur="پیٹرول ٹینک">Petrol Tank</option>
+                            <option data-en="Diesel Tank" data-ur="ڈیزل ٹینک">Diesel Tank</option>
+                            <option data-en="Trolley" data-ur="ٹرالی">Trolley</option>
+                        </select>
+                        <textarea name="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
+                        <button type="submit" class="btn-primary" data-en="Send Message" data-ur="پیغام بھیجیں">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
 <footer>
     <div class="container">
-        <div class="social-links"><a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">WhatsApp</a> | <a href="#">Twitter</a></div>
-        <p>&copy; 2025 Abdulzahir Enterprises Allied Chattha Petroleum. 202 RB Gatti, Faisalabad.</p>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Abdulzahir Enterprises</h4><p data-en="Premium manufacturer since 2007" data-ur="2007 سے پریمیم مینوفیکچرر">Premium manufacturer since 2007</p><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></div></div>
+            <div class="footer-col"><h4 data-en="Quick Links" data-ur="فوری لنکس">Quick Links</h4><ul><li><a href="index.html" data-en="Home" data-ur="ہوم">Home</a></li><li><a href="about.html" data-en="About" data-ur="تعارف">About</a></li><li><a href="contact.html" data-en="Contact" data-ur="رابطہ">Contact</a></li><li><a href="faq.html" data-en="FAQ" data-ur="سوالات">FAQ</a></li></ul></div>
+            <div class="footer-col"><h4 data-en="Products" data-ur="پراڈکٹس">Products</h4><ul><li><a href="water-tanks.html" data-en="Water Tanks" data-ur="پانی کے ٹینک">Water Tanks</a></li><li><a href="petrol-tanks.html" data-en="Petrol Tanks" data-ur="پیٹرول ٹینک">Petrol Tanks</a></li><li><a href="diesel-tanks.html" data-en="Diesel Tanks" data-ur="ڈیزل ٹینک">Diesel Tanks</a></li><li><a href="trolleys.html" data-en="Trolleys" data-ur="ٹرالیاں">Trolleys</a></li></ul></div>
+            <div class="footer-col"><h4 data-en="Contact Info" data-ur="رابطہ کی معلومات">Contact Info</h4><p>📍 202 RB Gatti, Faisalabad</p><p>📞 03427660710</p><p>✉️ abdulzahir7869@gmail.com</p><p data-en="🕒 Mon-Sat: 9AM - 7PM" data-ur="🕒 پیر تا ہفتہ: 9AM - 7PM">🕒 Mon-Sat: 9AM - 7PM</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2025 Abdulzahir Enterprises Allied Chattha Petroleum. All rights reserved.</p></div>
     </div>
 </footer>
+
+<a href="https://wa.me/923427660710?text=Hello%20Abdulzahir%20Enterprises%2C%20I%20need%20a%20quote" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+
+<script>
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() { document.querySelector('nav ul').classList.toggle('show'); });
+    
+    let currentLang = 'en';
+    function setLanguage(lang) {
+        currentLang = lang;
+        document.querySelectorAll('.lang-btn').forEach(btn => { btn.classList.remove('active'); });
+        if (lang === 'en') document.querySelector('.lang-btn:first-child').classList.add('active');
+        else document.querySelector('.lang-btn:last-child').classList.add('active');
+        document.querySelectorAll('[data-en][data-ur]').forEach(el => { el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ur'); });
+        const headerTop = document.querySelector('.header-top .container div:first-child');
+        if(headerTop) headerTop.textContent = lang === 'en' ? '🏭 Established Since 2007' : '🏭 قائم شد 2007 سے';
+        document.querySelectorAll('select option').forEach(option => {
+            if(option.getAttribute('data-en') && option.getAttribute('data-ur')) {
+                option.textContent = lang === 'en' ? option.getAttribute('data-en') : option.getAttribute('data-ur');
+            }
+        });
+    }
+    
+    function submitContactForm(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(formData).toString() })
+            .then(() => { document.getElementById('successMessage').style.display = 'block'; form.reset(); setTimeout(() => { document.getElementById('successMessage').style.display = 'none'; }, 5000); })
+            .catch(() => alert('There was an error. Please call us directly at 03427660710'));
+    }
+    
+    let clickCount = 0, clickTimer;
+    document.getElementById('secretAdminLogo')?.addEventListener('click', function() {
+        clickCount++;
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(() => clickCount = 0, 1000);
+        if (clickCount === 3) { window.open('/admin/', '_blank'); clickCount = 0; }
+    });
+</script>
 </body>
 </html>

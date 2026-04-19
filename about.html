@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Abdulzahir Enterprises</title>
+    <title>About Us - Abdulzahir Enterprises | Premium Tanks & Trolleys Manufacturer in Faisalabad</title>
+    <meta name="description" content="Learn about Abdulzahir Enterprises Allied Chattha Petroleum - premium manufacturer of water tanks, petrol tanks, diesel tanks, and trolleys since 2007 in Faisalabad, Pakistan. Material on client demand.">
+    <meta name="keywords" content="about us, tank manufacturer, Faisalabad, Pakistan, Abdulzahir Enterprises, Chattha Petroleum">
+    <meta name="author" content="Abdulzahir Enterprises Allied Chattha Petroleum">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://abdulzahirenterprises.com/about.html">
+    
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -15,13 +26,15 @@
         .header-top .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
         .main-header { padding: 15px 0; }
         .main-header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo { display: flex; align-items: center; gap: 12px; }
-        .logo-icon { background: #ffd700; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+        .logo { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+        .logo-icon { background: #ffd700; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; transition: 0.3s; }
+        .logo-icon:hover { transform: scale(1.05); }
         .logo-text h1 { font-size: 22px; font-weight: 700; margin: 0; }
         .logo-text p { font-size: 10px; color: #ffd700; letter-spacing: 1.5px; margin-top: 3px; }
         .language-switch { display: flex; gap: 8px; background: rgba(255,255,255,0.15); padding: 5px 10px; border-radius: 40px; margin-left: 20px; }
-        .lang-btn { background: none; border: none; color: white; padding: 5px 12px; border-radius: 30px; cursor: pointer; font-size: 13px; }
+        .lang-btn { background: none; border: none; color: white; padding: 5px 12px; border-radius: 30px; cursor: pointer; font-size: 13px; font-weight: 500; }
         .lang-btn.active { background: #ffd700; color: #0d2b1f; }
+        .lang-btn:hover:not(.active) { background: rgba(255,255,255,0.2); }
         .header-right { display: flex; align-items: center; gap: 20px; }
         nav ul { list-style: none; display: flex; gap: 28px; }
         nav a { color: white; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
@@ -48,12 +61,12 @@
         .footer-col h4 { font-size: 18px; margin-bottom: 20px; color: #ffd700; }
         .footer-col ul { list-style: none; }
         .footer-col li { margin-bottom: 12px; }
-        .footer-col a { color: #ccc; text-decoration: none; font-size: 14px; }
+        .footer-col a { color: #ccc; text-decoration: none; font-size: 14px; transition: 0.3s; }
         .footer-col a:hover { color: #ffd700; }
-        .social-icons a { color: white; font-size: 22px; margin-right: 15px; display: inline-block; }
+        .social-icons a { color: white; font-size: 22px; margin-right: 15px; transition: 0.3s; display: inline-block; text-decoration: none; }
         .social-icons a:hover { color: #ffd700; transform: translateY(-3px); }
         .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: #888; }
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px; text-decoration: none; z-index: 99; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.3s; z-index: 99; }
         .whatsapp-float:hover { transform: scale(1.1); background: #128C7E; }
         @media (max-width: 1024px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) {
@@ -81,18 +94,18 @@
 <header>
     <div class="main-header">
         <div class="container">
-            <div class="logo">
+            <div class="logo" id="secretAdminLogo">
                 <div class="logo-icon">💧⛽</div>
                 <div class="logo-text"><h1>Abdulzahir Enterprises</h1><p>ALLIED CHATTHA PETROLEUM</p></div>
             </div>
             <div class="header-right">
                 <div class="language-switch">
-                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="setLanguage('ur')">اردو</button>
+                    <button class="lang-btn active" onclick="setLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('ur')" aria-label="Urdu">اردو</button>
                 </div>
-                <button class="mobile-menu-btn">☰</button>
+                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
             </div>
-            <nav>
+            <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html" data-en="Home" data-ur="ہوم">Home</a></li>
                     <li><a href="about.html" data-en="About" data-ur="تعارف">About</a></li>
@@ -110,55 +123,57 @@
     </div>
 </header>
 
-<section class="page-header">
-    <div class="container">
-        <h1 data-en="About Us" data-ur="ہمارے بارے میں">About Us</h1>
-        <p data-en="Learn more about our journey and commitment to quality" data-ur="ہمارے سفر اور معیار کے عزم کے بارے میں مزید جانیں">Learn more about our journey and commitment to quality</p>
-    </div>
-</section>
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1 data-en="About Us" data-ur="ہمارے بارے میں">About Us</h1>
+            <p data-en="Learn more about our journey and commitment to quality" data-ur="ہمارے سفر اور معیار کے عزم کے بارے میں مزید جانیں">Learn more about our journey and commitment to quality</p>
+        </div>
+    </section>
 
-<section class="about-content">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-text">
-                <h2 data-en="Premium Manufacturing Since 2007" data-ur="پریمیم مینوفیکچرنگ 2007 سے">Premium Manufacturing Since 2007</h2>
-                <p data-en="Abdulzahir Enterprises Allied Chattha Petroleum has been a trusted name in manufacturing high-quality water tanks, petrol tanks, diesel tanks, and trolleys. Based in 202 RB Gatti, Faisalabad, Punjab, Pakistan, we serve clients across the country with durable products made from materials as per client demand." data-ur="عبدالظہر انٹرپرائزز الائیڈ چٹھا پیٹرولیم پانی کے ٹینک، پیٹرول ٹینک، ڈیزل ٹینک اور ٹرالیوں کی تیاری میں ایک قابل اعتماد نام رہا ہے۔">Abdulzahir Enterprises Allied Chattha Petroleum has been a trusted name in manufacturing high-quality water tanks, petrol tanks, diesel tanks, and trolleys. Based in 202 RB Gatti, Faisalabad, Punjab, Pakistan, we serve clients across the country with durable products made from materials as per client demand.</p>
-                <p data-en="Our mission is to provide innovative storage solutions that meet client requirements. We use premium raw materials as per customer demand and advanced manufacturing techniques to ensure every product exceeds customer expectations." data-ur="ہمارا مشن جدید اسٹوریج حل فراہم کرنا ہے جو گاہک کی ضروریات کو پورا کرتے ہیں۔">Our mission is to provide innovative storage solutions that meet client requirements. We use premium raw materials as per customer demand and advanced manufacturing techniques to ensure every product exceeds customer expectations.</p>
-                <h3 data-en="Our Vision" data-ur="ہمارا وژن">Our Vision</h3>
-                <p data-en="To become Pakistan's leading manufacturer of industrial equipment, recognized for quality, customer satisfaction, and flexible material options." data-ur="پاکستان کے صنعتی آلات کے معروف کارخانہ دار بننا، جو معیار، گاہک کی اطمینان اور لچکدار مواد کے اختیارات کے لیے پہچانا جائے۔">To become Pakistan's leading manufacturer of industrial equipment, recognized for quality, customer satisfaction, and flexible material options.</p>
-                <h3 data-en="Why Choose Us?" data-ur="ہمیں کیوں منتخب کریں؟">Why Choose Us?</h3>
-                <ul>
-                    <li data-en="18+ years of manufacturing experience" data-ur="18+ سال کا مینوفیکچرنگ تجربہ">18+ years of manufacturing experience</li>
-                    <li data-en="Material on client demand" data-ur="گاہک کی درخواست پر مواد">Material on client demand</li>
-                    <li data-en="Competitive pricing with premium quality" data-ur="پریمیم کوالٹی کے ساتھ مسابقتی قیمتیں">Competitive pricing with premium quality</li>
-                    <li data-en="Nationwide delivery (charges apply)" data-ur="ملک بھر میں ڈلیوری (چارجز لاگو)">Nationwide delivery (charges apply)</li>
-                    <li data-en="24/7 customer support" data-ur="24/7 کسٹمر سپورٹ">24/7 customer support</li>
-                    <li data-en="1-year warranty on tanks" data-ur="ٹینکوں پر 1 سال کی وارنٹی">1-year warranty on tanks</li>
-                </ul>
-            </div>
-            <div class="about-image">
-                <span>🏭</span>
-                <p style="margin-top: 20px;" data-en="Our Manufacturing Facility" data-ur="ہماری مینوفیکچرنگ سہولت">Our Manufacturing Facility</p>
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 data-en="Premium Manufacturing Since 2007" data-ur="پریمیم مینوفیکچرنگ 2007 سے">Premium Manufacturing Since 2007</h2>
+                    <p data-en="Abdulzahir Enterprises Allied Chattha Petroleum has been a trusted name in manufacturing high-quality water tanks, petrol tanks, diesel tanks, and trolleys. Based in 202 RB Gatti, Faisalabad, Punjab, Pakistan, we serve clients across the country with durable products made from materials as per client demand." data-ur="عبدالظہر انٹرپرائزز الائیڈ چٹھا پیٹرولیم پانی کے ٹینک، پیٹرول ٹینک، ڈیزل ٹینک اور ٹرالیوں کی تیاری میں ایک قابل اعتماد نام رہا ہے۔">Abdulzahir Enterprises Allied Chattha Petroleum has been a trusted name in manufacturing high-quality water tanks, petrol tanks, diesel tanks, and trolleys. Based in 202 RB Gatti, Faisalabad, Punjab, Pakistan, we serve clients across the country with durable products made from materials as per client demand.</p>
+                    <p data-en="Our mission is to provide innovative storage solutions that meet client requirements. We use premium raw materials as per customer demand and advanced manufacturing techniques to ensure every product exceeds customer expectations." data-ur="ہمارا مشن جدید اسٹوریج حل فراہم کرنا ہے جو گاہک کی ضروریات کو پورا کرتے ہیں۔">Our mission is to provide innovative storage solutions that meet client requirements. We use premium raw materials as per customer demand and advanced manufacturing techniques to ensure every product exceeds customer expectations.</p>
+                    <h3 data-en="Our Vision" data-ur="ہمارا وژن">Our Vision</h3>
+                    <p data-en="To become Pakistan's leading manufacturer of industrial equipment, recognized for quality, customer satisfaction, and flexible material options." data-ur="پاکستان کے صنعتی آلات کے معروف کارخانہ دار بننا، جو معیار، گاہک کی اطمینان اور لچکدار مواد کے اختیارات کے لیے پہچانا جائے۔">To become Pakistan's leading manufacturer of industrial equipment, recognized for quality, customer satisfaction, and flexible material options.</p>
+                    <h3 data-en="Why Choose Us?" data-ur="ہمیں کیوں منتخب کریں؟">Why Choose Us?</h3>
+                    <ul>
+                        <li data-en="18+ years of manufacturing experience" data-ur="18+ سال کا مینوفیکچرنگ تجربہ">18+ years of manufacturing experience</li>
+                        <li data-en="Material on client demand" data-ur="گاہک کی درخواست پر مواد">Material on client demand</li>
+                        <li data-en="Competitive pricing with premium quality" data-ur="پریمیم کوالٹی کے ساتھ مسابقتی قیمتیں">Competitive pricing with premium quality</li>
+                        <li data-en="Nationwide delivery (charges apply)" data-ur="ملک بھر میں ڈلیوری (چارجز لاگو)">Nationwide delivery (charges apply)</li>
+                        <li data-en="24/7 customer support" data-ur="24/7 کسٹمر سپورٹ">24/7 customer support</li>
+                        <li data-en="1-year warranty on tanks" data-ur="ٹینکوں پر 1 سال کی وارنٹی">1-year warranty on tanks</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <span>🏭</span>
+                    <p style="margin-top: 20px;" data-en="Our Manufacturing Facility" data-ur="ہماری مینوفیکچرنگ سہولت">Our Manufacturing Facility</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="stats-section">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item"><h3>18+</h3><p data-en="Years Experience" data-ur="سال کا تجربہ">Years Experience</p></div>
-            <div class="stat-item"><h3>3000+</h3><p data-en="Happy Clients" data-ur="خوش گاہک">Happy Clients</p></div>
-            <div class="stat-item"><h3>30+</h3><p data-en="Expert Staff" data-ur="ماہر عملہ">Expert Staff</p></div>
-            <div class="stat-item"><h3>100%</h3><p data-en="Satisfaction Rate" data-ur="اطمینان کی شرح">Satisfaction Rate</p></div>
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item"><h3>18+</h3><p data-en="Years Experience" data-ur="سال کا تجربہ">Years Experience</p></div>
+                <div class="stat-item"><h3>3000+</h3><p data-en="Happy Clients" data-ur="خوش گاہک">Happy Clients</p></div>
+                <div class="stat-item"><h3>30+</h3><p data-en="Expert Staff" data-ur="ماہر عملہ">Expert Staff</p></div>
+                <div class="stat-item"><h3>100%</h3><p data-en="Satisfaction Rate" data-ur="اطمینان کی شرح">Satisfaction Rate</p></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
 
 <footer>
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-col"><h4>Abdulzahir Enterprises</h4><p data-en="Premium manufacturer since 2007" data-ur="2007 سے پریمیم مینوفیکچرر">Premium manufacturer since 2007</p><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
+            <div class="footer-col"><h4>Abdulzahir Enterprises</h4><p data-en="Premium manufacturer since 2007" data-ur="2007 سے پریمیم مینوفیکچرر">Premium manufacturer since 2007</p><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></div></div>
             <div class="footer-col"><h4 data-en="Quick Links" data-ur="فوری لنکس">Quick Links</h4><ul><li><a href="index.html" data-en="Home" data-ur="ہوم">Home</a></li><li><a href="about.html" data-en="About" data-ur="تعارف">About</a></li><li><a href="contact.html" data-en="Contact" data-ur="رابطہ">Contact</a></li><li><a href="faq.html" data-en="FAQ" data-ur="سوالات">FAQ</a></li></ul></div>
             <div class="footer-col"><h4 data-en="Products" data-ur="پراڈکٹس">Products</h4><ul><li><a href="water-tanks.html" data-en="Water Tanks" data-ur="پانی کے ٹینک">Water Tanks</a></li><li><a href="petrol-tanks.html" data-en="Petrol Tanks" data-ur="پیٹرول ٹینک">Petrol Tanks</a></li><li><a href="diesel-tanks.html" data-en="Diesel Tanks" data-ur="ڈیزل ٹینک">Diesel Tanks</a></li><li><a href="trolleys.html" data-en="Trolleys" data-ur="ٹرالیاں">Trolleys</a></li></ul></div>
             <div class="footer-col"><h4 data-en="Contact Info" data-ur="رابطہ کی معلومات">Contact Info</h4><p>📍 202 RB Gatti, Faisalabad</p><p>📞 03427660710</p><p>✉️ abdulzahir7869@gmail.com</p><p data-en="🕒 Mon-Sat: 9AM - 7PM" data-ur="🕒 پیر تا ہفتہ: 9AM - 7PM">🕒 Mon-Sat: 9AM - 7PM</p></div>
@@ -167,7 +182,7 @@
     </div>
 </footer>
 
-<a href="https://wa.me/923427660710?text=Hello%20Abdulzahir%20Enterprises%2C%20I%20need%20a%20quote" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/923427660710?text=Hello%20Abdulzahir%20Enterprises%2C%20I%20need%20a%20quote" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
 
 <script>
     document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() { document.querySelector('nav ul').classList.toggle('show'); });
@@ -181,6 +196,14 @@
         const headerTop = document.querySelector('.header-top .container div:first-child');
         if(headerTop) headerTop.textContent = lang === 'en' ? '🏭 Established Since 2007' : '🏭 قائم شد 2007 سے';
     }
+    
+    let clickCount = 0, clickTimer;
+    document.getElementById('secretAdminLogo')?.addEventListener('click', function() {
+        clickCount++;
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(() => clickCount = 0, 1000);
+        if (clickCount === 3) { window.open('/admin/', '_blank'); clickCount = 0; }
+    });
 </script>
 </body>
 </html>
